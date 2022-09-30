@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+<div class="d-flex my-4 p-4 container border border-dark rounded ">
+    <div class="col-md-12">
+
+        <h1 class="text-center my-2">영화 리뷰 커뮤니티</h1>
+
+        <body>
+
+            <div class="col-md-12">
+
+                <div class="container bol">
+                    <a href="{% url 'apps:new' %}">리뷰 작성</a>
+
+                    <table class="table table-bordered">
+                        <tr>
+                            <thead class="table-dark">
+                                <th>리뷰 번호</th>
+                                <th>리뷰 제목</th>
+                                <th>작성 시간</th>
+                            </thead>
+                        </tr>
+                        <tbody>
+                            {% for review in reviews %}
+                            <tr class="text-center">
+                                <td>{{ review.id }}</td>
+                                <td><a href="{% url 'apps:detail' review.pk  %}">{{review.content}}</a></td>
+                                <td>{{review.created_at}}</td>
+                            </tr>
+                        </tbody>
+
+                        {% endfor %}
+                    </table>
+
+
+                </div>
+            </div>
+    </div>
+
+
+
+
+    {% endblock %}
