@@ -1,19 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>제목 : {{ review.title }}</h1>
-<p>{{ review.content }}</p>
 
-<button type="button" class="btn btn-primary">
-    <a class="text-white" href="{% url 'apps:edit' review.pk %}">
-        수정
-    </a></button>
-</td>
-<button type="button" class="btn btn-danger">
-    <a class="text-white" href="{% url 'apps:delete' review.pk %}">
-        삭제</a></button>
+<div class="container-lg my-4">
 
-<button type="button" class="btn btn-dark"><a class="text-white" href="{% url 'apps:index'%}">홈으로</a></button>
+    <h2 class="my-4 py-4">제목 : {{review.title}}</h2>
+    <h2>내용</h2>
+
+    <div class="card mb-4" style="width: 600px; height:450px;">
+        <div class="card-body">
+            <p class="card-text fs-3">{{ review.content }}</p>
+        </div>
+    </div>
 
 
+    <button type="button" class="btn btn-primary">
+        <a class="text-white" href="{% url 'apps:edit' review.pk %}">
+            수정
+        </a></button>
+    </td>
+    <button type="button" class="btn btn-danger">
+        <a class="text-white" href="{% url 'apps:delete' review.pk %}">
+            삭제</a></button>
+
+
+    <button type="button" class="btn btn-dark"><a class="text-white" href="{% url 'apps:index'%}">홈으로</a></button>
+
+</div>
 {% endblock %}

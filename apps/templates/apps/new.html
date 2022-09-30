@@ -4,9 +4,10 @@
 <div class="col-md-12">
 
     <div class="container bol">
+        <h1 class="text-center my-4"> 리뷰 작성 </h1>
         <form action="{% url 'apps:create' %}">
-            제목<input class="form-control" input type="text" name="title" maxlength="80">
-            내용<textarea class="form-control" input type="text" rows="3" name="content"></textarea>
+            <h2>제목</h2><input class="form-control my-2" input type="text" name="title" maxlength="80">
+            <h2>내용</h2><textarea class="form-control" input type="text" rows="3" name="content"></textarea>
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary mt-3 mb-3">리뷰 쓰기</button>
             </div>
