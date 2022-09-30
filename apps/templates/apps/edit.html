@@ -2,7 +2,7 @@
 {% block content %}
 
 
-<h1 class="text-center my-4">{{review.id}}번째 글 수정</h1>
+<h1 class="text-center my-4">{{review.id}}번 글 수정</h1>
 <form action="{% url 'apps:update' review.pk %}">
     <div class="m-4 fs-3">
         <h2>제목</h2><input class="form-control my-2" input type="text" name="title" maxlength="80">
