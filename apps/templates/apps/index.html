@@ -27,8 +27,8 @@
                         <tbody>
                             {% for review in reviews %}
                             <tr class="text-center">
-                                <td>{{ review.id }}</td>
-                                <td><a href="{% url 'apps:detail' review.pk  %}">{{review.content}}</a></td>
+                                <td>{{review.id}}</td>
+                                <td><a href="{% url 'apps:detail' review.pk  %}">{{review.title}}</a></td>
                                 <td>{{review.created_at}}</td>
                             </tr>
                         </tbody>
